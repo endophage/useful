@@ -1,0 +1,16 @@
+#cloud-config
+
+# deploys an Ubuntu 16.04 or newer instance with the latest version of docker-ce
+
+apt_sources:
+  - source: "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+    keyid: 0EBFCD88
+
+package_update: true
+pacakge_upgrade: true
+packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common
+  - docker-ce
